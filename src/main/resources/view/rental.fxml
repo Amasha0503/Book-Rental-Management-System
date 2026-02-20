@@ -5,114 +5,68 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentalController">
-   <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <AnchorPane prefHeight="400.0" prefWidth="604.0">
+<AnchorPane prefHeight="400.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RentalController">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2d1b3" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="166.0" />
-                  <JFXButton layoutX="22.0" layoutY="175.0" onAction="#btnRentalOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Rental" textAlignment="CENTER" textFill="WHITE">
+                  <Rectangle fill="#754514a6" height="48.0" stroke="#734415a6" strokeType="INSIDE" strokeWidth="0.0" width="438.0" />
+                  <Text fill="WHITE" layoutX="204.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="22.0" layoutY="119.0" onAction="#btnDashboardOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="22.0" layoutY="227.0" onAction="#btnCustomerOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Customer" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="22.0" layoutY="278.0" onAction="#btnBookOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Book" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="15.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton layoutX="45.0" layoutY="357.0" onAction="#btnSignOutOnAction" style="-fx-background-color: #794814;" text="Sign Out" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </JFXButton>
-                  <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="61.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/3145866.png" />
-                     </image>
-                  </ImageView>
-                  <Rectangle fill="#754514a6" height="48.0" layoutX="166.0" stroke="#734415a6" strokeType="INSIDE" strokeWidth="0.0" width="480.0" />
-                  <Text fill="WHITE" layoutX="370.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rental" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="22.0" />
                      </font>
                   </Text>
-                  <Text fill="#794814" layoutX="57.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRMS" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-                  <JFXTextField fx:id="txtRentalID" layoutX="188.0" layoutY="66.0" prefHeight="26.0" prefWidth="89.0" promptText="Rental ID" />
-                  <JFXTextField fx:id="txtBookID" layoutX="352.0" layoutY="66.0" prefHeight="26.0" prefWidth="90.0" promptText="Book ID" />
-                  <JFXTextField fx:id="txtCustomerID" layoutX="518.0" layoutY="66.0" prefHeight="26.0" prefWidth="90.0" promptText="Customer ID" />
-                  <DatePicker fx:id="dpReturnDate" layoutX="188.0" layoutY="193.0" prefHeight="26.0" prefWidth="142.0" promptText="Return Date" />
-                  <JFXButton layoutX="379.0" layoutY="146.0" onAction="#btnIssueOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #15D507; -fx-background-radius: 20;" text="Issue" textAlignment="CENTER" textFill="WHITE">
+                  <JFXTextField fx:id="txtRentalID" layoutX="26.0" layoutY="66.0" prefHeight="26.0" prefWidth="98.0" promptText="Rental ID" />
+                  <JFXTextField fx:id="txtBookID" layoutX="170.0" layoutY="66.0" prefHeight="26.0" prefWidth="98.0" promptText="Book ID" />
+                  <JFXTextField fx:id="txtCustomerID" layoutX="309.0" layoutY="66.0" prefHeight="26.0" prefWidth="98.0" promptText="Customer ID" />
+                  <DatePicker fx:id="dpReturnDate" layoutX="26.0" layoutY="196.0" prefHeight="26.0" prefWidth="122.0" promptText="Return Date" />
+                  <JFXButton layoutX="163.0" layoutY="144.0" onAction="#btnIssueOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #15D507; -fx-background-radius: 20;" text="Issue" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="579.0" layoutY="146.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E13434; -fx-background-radius: 20;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton layoutX="363.0" layoutY="144.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E13434; -fx-background-radius: 20;" text="Delete" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="513.0" layoutY="146.0" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #3091F2; -fx-background-radius: 20;" text="Update" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton layoutX="297.0" layoutY="144.0" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #3091F2; -fx-background-radius: 20;" text="Update" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="447.0" layoutY="146.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E7CA39; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton layoutX="231.0" layoutY="144.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E7CA39; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <TableView fx:id="tblRental" layoutX="174.0" layoutY="232.0" prefHeight="138.0" prefWidth="464.0">
+                  <TableView fx:id="tblRental" layoutX="11.0" layoutY="232.0" prefHeight="138.0" prefWidth="422.0" stylesheets="@../css/style.css">
                     <columns>
-                      <TableColumn fx:id="columnRentalID" prefWidth="58.4000244140625" text="Rental ID" />
-                      <TableColumn fx:id="columnBookID" prefWidth="57.59999084472656" text="Book ID" />
-                        <TableColumn fx:id="columnCustomerID" prefWidth="76.0" text="Customer ID" />
-                        <TableColumn fx:id="columnIssueDate" prefWidth="72.79998779296875" text="Issue Date" />
-                        <TableColumn fx:id="columnDueDate" prefWidth="66.39996337890625" text="Due Date" />
-                        <TableColumn fx:id="columnReturnDate" prefWidth="75.99993896484375" text="Return Date" />
-                        <TableColumn fx:id="columnFines" prefWidth="55.99993896484375" text="Fines" />
+                      <TableColumn fx:id="columnRentalID" prefWidth="48.0" text="R_ID" />
+                      <TableColumn fx:id="columnBookID" prefWidth="47.20001220703125" text="B_ID" />
+                        <TableColumn fx:id="columnCustomerID" prefWidth="51.20001220703125" text="C_ID" />
+                        <TableColumn fx:id="columnIssueDate" prefWidth="70.4000244140625" text="Issue Date" />
+                        <TableColumn fx:id="columnDueDate" prefWidth="68.7999267578125" text="Due Date" />
+                        <TableColumn fx:id="columnReturnDate" minWidth="0.0" prefWidth="76.79998779296875" text="Return Date" />
+                        <TableColumn fx:id="columnFines" prefWidth="60.800048828125" text="Fines" />
                     </columns>
                   </TableView>
-                  <JFXButton layoutX="583.0" layoutY="373.0" onAction="#btnReloadOnAction" prefHeight="24.0" prefWidth="57.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Reload" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton layoutX="378.0" layoutY="373.0" onAction="#btnReloadOnAction" prefHeight="24.0" prefWidth="57.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Reload" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <DatePicker fx:id="dpDueDtae" layoutX="352.0" layoutY="106.0" prefHeight="26.0" prefWidth="130.0" promptText="Due Date" />
-                  <DatePicker fx:id="dpIssueDate" layoutX="188.0" layoutY="106.0" prefHeight="26.0" prefWidth="130.0" promptText="Issue Date" />
-                  <JFXButton layoutX="579.0" layoutY="196.0" onAction="#btnReturnOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #589A54; -fx-background-radius: 20;" text="Return" textAlignment="CENTER" textFill="WHITE">
+                  <DatePicker fx:id="dpDueDtae" layoutX="170.0" layoutY="106.0" prefHeight="26.0" prefWidth="122.0" promptText="Due Date" />
+                  <DatePicker fx:id="dpIssueDate" layoutX="26.0" layoutY="106.0" prefHeight="26.0" prefWidth="122.0" promptText="Issue Date" />
+                  <JFXButton layoutX="363.0" layoutY="196.0" onAction="#btnReturnOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #589A54; -fx-background-radius: 20;" text="Return" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <Line endX="372.20001220703125" endY="-1.52587890625E-5" layoutX="270.0" layoutY="181.0" opacity="0.5" startX="-100.0" strokeWidth="0.5" />
+                  <Line endX="161.5" endY="-1.52587890625E-5" layoutX="270.0" layoutY="181.0" opacity="0.5" startX="-270.0" startY="-1.52587890625E-5" strokeWidth="0.5" />
                </children>
             </AnchorPane>
-         </children>
-      </AnchorPane>
-   </children>
-</AnchorPane>
+
