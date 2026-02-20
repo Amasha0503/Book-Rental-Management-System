@@ -35,7 +35,7 @@
       <Text layoutX="389.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" />
       <ComboBox layoutX="388.0" layoutY="138.0" prefWidth="150.0" promptText="Staff/Admin" style="-fx-background-color: F2D1B3;" visibleRowCount="3" />
       <Text layoutX="389.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Role" />
-      <JFXButton buttonType="RAISED" layoutX="430.0" layoutY="294.0" style="-fx-background-color: #794814;" text="Sign In" textFill="WHITE">
+      <JFXButton layoutX="430.0" layoutY="294.0" style="-fx-background-color: #794814;" text="Sign In" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
