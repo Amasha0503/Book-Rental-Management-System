@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,27 +12,27 @@
 <AnchorPane prefHeight="400.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2d1b3" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="166.0" />
-      <JFXButton layoutX="22.0" layoutY="175.0" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Rental" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton layoutX="22.0" layoutY="175.0" onAction="#btnRentalOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Rental" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="22.0" layoutY="119.0" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton layoutX="22.0" layoutY="119.0" onAction="#btnDashboardOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="22.0" layoutY="227.0" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Customer" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton layoutX="22.0" layoutY="227.0" onAction="#btnCustomerOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Customer" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="22.0" layoutY="278.0" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Book" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton layoutX="22.0" layoutY="278.0" onAction="#btnBookOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Book" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="45.0" layoutY="357.0" style="-fx-background-color: #794814;" text="Sign Out" textFill="WHITE">
+      <JFXButton layoutX="45.0" layoutY="357.0" onAction="#btnSignOutOnAction" style="-fx-background-color: #794814;" text="Sign Out" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -49,39 +50,14 @@
       </Text>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="57.0" layoutX="176.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="137.0" />
       <Text layoutX="192.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Books" />
-      <Text layoutX="224.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="57.0" layoutX="491.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="137.0" />
       <Text layoutX="506.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Rentals" />
-      <Text layoutX="532.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="57.0" layoutX="176.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="137.0" />
       <Text layoutX="184.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overdue Rentals" />
-      <Text layoutX="224.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="57.0" layoutX="332.0" layoutY="157.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="137.0" />
       <Text layoutX="344.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fines" />
-      <Text layoutX="373.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RS. 0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="57.0" layoutX="333.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="137.0" />
       <Text layoutX="343.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Customers" wrappingWidth="91.8720703125" />
-      <Text layoutX="377.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
       <Text fill="#794814" layoutX="57.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRMS" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -112,5 +88,30 @@
             <Image url="@../images/pngtree-coin-money-icon-png-image_5278199.jpg" />
          </image>
       </ImageView>
+      <Label fx:id="lblBooks" layoutX="214.0" layoutY="110.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblActiveRentals" layoutX="539.0" layoutY="110.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomers" layoutX="383.0" layoutY="110.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOverdues" layoutX="218.0" layoutY="190.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFines" layoutX="359.0" layoutY="190.0" text="Rs.0.00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

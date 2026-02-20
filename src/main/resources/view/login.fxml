@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -29,16 +30,16 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField layoutX="389.0" layoutY="242.0" promptText="********" style="-fx-background-color: F2D1B3;" />
-      <TextField layoutX="388.0" layoutY="191.0" promptText="abcd@gmail.com" style="-fx-background-color: F2D1B3;" />
+      <TextField fx:id="txtUserName" layoutX="388.0" layoutY="191.0" promptText="abcd@gmail.com" style="-fx-background-color: F2D1B3;" />
       <Text layoutX="389.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
       <Text layoutX="389.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name" />
-      <ComboBox layoutX="388.0" layoutY="138.0" prefWidth="150.0" promptText="Staff/Admin" style="-fx-background-color: F2D1B3;" visibleRowCount="3" />
+      <ComboBox fx:id="cmbRole" layoutX="388.0" layoutY="138.0" prefWidth="150.0" promptText="Staff/Admin" style="-fx-background-color: F2D1B3;" visibleRowCount="3" />
       <Text layoutX="389.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Role" />
-      <JFXButton layoutX="430.0" layoutY="294.0" style="-fx-background-color: #794814;" text="Sign In" textFill="WHITE">
+      <JFXButton layoutX="430.0" layoutY="294.0" onAction="#btnSignInOnAction" style="-fx-background-color: #794814;" text="Sign In" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
+      <PasswordField fx:id="pwdPassword" layoutX="388.0" layoutY="242.0" promptText="********" style="-fx-background-color: F2D1B3;" />
    </children>
 </AnchorPane>
