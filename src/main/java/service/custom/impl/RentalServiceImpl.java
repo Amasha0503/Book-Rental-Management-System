@@ -7,6 +7,7 @@ import service.custom.RentalService;
 import util.RepositoryType;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 public class RentalServiceImpl implements RentalService {
@@ -37,6 +38,17 @@ public class RentalServiceImpl implements RentalService {
     @Override
     public List<Rental> getAll() throws SQLException {
         return rentalRepository.getAll();
+    }
+
+    @Override
+    public double calculateFines(LocalDate dueDate, LocalDate returnDate) {
+
+        long daysDifference = java.time.temporal.ChronoUnit.DAYS.between(dueDate, returnDate);
+
+        if (daysDifference > 0) {
+            return daysDifference * 50.0;
+        }
+        return 0.0;
     }
 
 

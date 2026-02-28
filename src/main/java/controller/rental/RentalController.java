@@ -135,6 +135,9 @@ public class RentalController implements Initializable {
 
     @FXML
     void btnReturnOnAction(ActionEvent event) {
+
+        double calculatedFines = serviceType.calculateFines(dpDueDate.getValue(), dpReturnDate.getValue());
+
         Rental rental = new Rental(
                 Integer.parseInt(txtRentalID.getText()),
                 Integer.parseInt(txtBookID.getText()),
@@ -142,13 +145,14 @@ public class RentalController implements Initializable {
                 dpIssueDate.getValue(),
                 dpDueDate.getValue(),
                 dpReturnDate.getValue(),
-                Double.parseDouble(txtFines.getText())
+                calculatedFines
         );
         System.out.println(rental);
 
         try {
             if (serviceType.updateRental(rental)) {
-                new Alert(Alert.AlertType.INFORMATION, "Book Returned !").show();
+                new Alert(Alert.AlertType.INFORMATION,
+                    "Book Returned !\nFines: Rs. " + calculatedFines).show();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Book not Returned !").show();
             }
@@ -230,6 +234,13 @@ public class RentalController implements Initializable {
             );
 
             setTextToValues(rental);
+        });
+
+        dpReturnDate.valueProperty().addListener((observableValue, oldValue, newValue) -> {
+            if (newValue != null && dpDueDate.getValue() != null) {
+                double calculatedFines = serviceType.calculateFines(dpDueDate.getValue(), newValue);
+                txtFines.setText(String.valueOf(calculatedFines));
+            }
         });
     }
 
