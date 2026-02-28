@@ -1,6 +1,7 @@
 package service.custom.impl;
 
 import com.google.inject.Inject;
+import model.Book;
 import model.Customer;
 import repository.custom.CustomerRepository;
 import service.custom.CustomerService;
@@ -45,5 +46,11 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public List<Integer> getAllCustomerIDs() throws SQLException {
         return List.of();
+    }
+
+    @Override
+    public int getTotalCustomers() throws SQLException {
+        List<Customer> allCustomers = customerRepository.getAll();
+        return allCustomers.size();
     }
 }

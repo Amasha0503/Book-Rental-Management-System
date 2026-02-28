@@ -13,4 +13,5 @@ public interface RentalService {
     Rental searchRentalById(int id) throws SQLException;
     List<Rental> getAll() throws SQLException;
     double calculateFines(LocalDate dueDate, LocalDate returnDate);
+    double getTotalFines() throws SQLException;
 }

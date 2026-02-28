@@ -51,5 +51,15 @@ public class RentalServiceImpl implements RentalService {
         return 0.0;
     }
 
+    @Override
+    public double getTotalFines() throws SQLException {
+        List<Rental> allRentals = rentalRepository.getAll();
+        double totalFines = 0.0;
+        for (Rental rental : allRentals) {
+            totalFines += rental.getFines();
+        }
+        return totalFines;
+    }
+
 
 }

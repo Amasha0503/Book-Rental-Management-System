@@ -12,4 +12,5 @@ public interface CustomerService {
         Customer searchCustomerById(int id) throws SQLException;
         List<Customer> getAll() throws SQLException;
         List<Integer> getAllCustomerIDs() throws SQLException;
+        int getTotalCustomers() throws SQLException;
 }

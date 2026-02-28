@@ -1,5 +1,6 @@
 package controller;
 
+import com.google.inject.Inject;
 import com.jfoenix.controls.JFXComboBox;
 import db.DbConnection;
 import javafx.collections.FXCollections;
@@ -11,6 +12,9 @@ import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
+import service.custom.BookService;
+import service.custom.CustomerService;
+import service.custom.RentalService;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -36,6 +40,15 @@ public class DashboardController implements Initializable {
 
     @FXML
     private Label lblOverdues;
+
+    @Inject
+    private BookService bookService;
+
+    @Inject
+    private CustomerService customerService;
+
+    @Inject
+    private RentalService rentalService;
 
     @FXML
     void btnPrintReportOnAction(ActionEvent actionEvent) {
@@ -100,5 +113,39 @@ public class DashboardController implements Initializable {
                                 "Rental Report"
                         ))
         );
+
+        loadTotalBookQuantity();
+        loadTotalCustomers();
+        loadTotalFines();
     }
+
+    private void loadTotalBookQuantity() {
+        try {
+            int totalQuantity = bookService.getTotalQuantity();
+            lblBooks.setText(String.valueOf(totalQuantity));
+        } catch (SQLException e) {
+            lblBooks.setText("0");
+        }
+    }
+    private void loadTotalCustomers() {
+        try {
+            int totalCustomers = customerService.getTotalCustomers();
+            lblCustomers.setText(String.valueOf(totalCustomers));
+        } catch (SQLException e) {
+            lblCustomers.setText("0");
+        }
+    }
+
+    private void loadTotalFines() {
+        try {
+            double totalFines = rentalService.getTotalFines();
+            lblFines.setText(String.format("Rs. %.2f", totalFines));
+        } catch (SQLException e) {
+            System.err.println("✗ Error loading total fines: " + e.getMessage());
+            e.printStackTrace();
+            lblFines.setText("Rs. 0.00");
+        }
+    }
+
+
 }

@@ -12,4 +12,5 @@ public interface BookService {
     boolean deleteBook(int id);
     Book searchBookById(int id) throws SQLException;
     List<Book> getAll() throws SQLException;
+    int getTotalQuantity() throws SQLException;
 }

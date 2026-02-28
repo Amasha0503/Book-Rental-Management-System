@@ -38,4 +38,14 @@ public class BookServiceImpl implements BookService {
         return bookRepository.getAll();
     }
 
+    @Override
+    public int getTotalQuantity() throws SQLException {
+        List<Book> allBooks = bookRepository.getAll();
+        int totalQuantity = 0;
+        for (Book book : allBooks) {
+            totalQuantity += book.getQuantity();
+        }
+        return totalQuantity;
+    }
+
 }
