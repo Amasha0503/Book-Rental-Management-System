@@ -13,14 +13,14 @@ import java.util.List;
 public class RentalRepositoryImpl implements RentalRepository {
     @Override
     public boolean create(Rental rental) throws SQLException {
-        LocalDate returnDate = rental.getReturnDate();
+
         return CrudUtil.execute("INSERT INTO rental VALUES(?,?,?,?,?,?,?)",
                 rental.getRentalId(),
                 rental.getBookId(),
                 rental.getCustomerId(),
                 rental.getIssueDate(),
                 rental.getDueDate(),
-                returnDate == null ? "0000-00-00" : returnDate,
+                rental.getReturnDate(),
                 rental.getFines()
         );
     }
@@ -72,6 +72,9 @@ public class RentalRepositoryImpl implements RentalRepository {
             ResultSet resultSet = CrudUtil.execute("SELECT * FROM rental");
             ArrayList<Rental> rentalArrayList = new ArrayList<>();
             while (resultSet.next()){
+                java.sql.Date returnDateSql = resultSet.getDate(6);
+                LocalDate returnDate = returnDateSql != null ? returnDateSql.toLocalDate() : null;
+
                 rentalArrayList.add(
                         new Rental(
                                 resultSet.getInt(1),
@@ -79,7 +82,7 @@ public class RentalRepositoryImpl implements RentalRepository {
                                 resultSet.getInt(3),
                                 resultSet.getDate(4).toLocalDate(),
                                 resultSet.getDate(5).toLocalDate(),
-                                resultSet.getDate(6).toLocalDate(),
+                                returnDate,
                                 resultSet.getDouble(7)
                         )
                 );

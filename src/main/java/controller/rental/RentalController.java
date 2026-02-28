@@ -97,9 +97,9 @@ public class RentalController implements Initializable {
 
         try {
             if (serviceType.addRental(rental)) {
-                new Alert(Alert.AlertType.INFORMATION, "Book Added !").show();
+                new Alert(Alert.AlertType.INFORMATION, "Book Issued !").show();
             } else {
-                new Alert(Alert.AlertType.ERROR, "Book not Added !").show();
+                new Alert(Alert.AlertType.ERROR, "Book not Issued !").show();
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
