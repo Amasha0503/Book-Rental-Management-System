@@ -13,8 +13,8 @@ import java.time.LocalDate;
 @ToString
 public class Rental {
     private int rentalId;
-    private int customerId;
     private int bookId;
+    private int customerId;
     private LocalDate issueDate;
     private LocalDate dueDate;
     private LocalDate returnDate;

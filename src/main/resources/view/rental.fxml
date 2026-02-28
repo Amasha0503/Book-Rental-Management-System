@@ -59,7 +59,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXButton>
-                  <DatePicker fx:id="dpDueDtae" layoutX="205.0" layoutY="106.0" prefHeight="26.0" prefWidth="146.0" promptText="Due Date" />
+                  <DatePicker fx:id="dpDueDate" layoutX="205.0" layoutY="106.0" prefHeight="26.0" prefWidth="146.0" promptText="Due Date" />
                   <DatePicker fx:id="dpIssueDate" layoutX="26.0" layoutY="106.0" prefHeight="26.0" prefWidth="146.0" promptText="Issue Date" />
                   <JFXButton layoutX="405.0" layoutY="194.0" onAction="#btnReturnOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #589A54; -fx-background-radius: 20;" text="Return" textAlignment="CENTER" textFill="WHITE">
                      <font>

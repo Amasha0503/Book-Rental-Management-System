@@ -12,8 +12,8 @@ import java.time.LocalDate;
 @ToString
 public class RentalTM {
     private int rentalId;
-    private int customerId;
     private int bookId;
+    private int customerId;
     private LocalDate issueDate;
     private LocalDate dueDate;
     private LocalDate returnDate;
