@@ -12,51 +12,51 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+<AnchorPane prefHeight="400.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customer.CustomerController">
          <children>
-            <Rectangle fill="#754514a6" height="48.0" stroke="#734415a6" strokeType="INSIDE" strokeWidth="0.0" width="438.0" />
-            <Text fill="WHITE" layoutX="169.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer" textAlignment="CENTER">
+            <Rectangle fill="#754514a6" height="48.0" stroke="#734415a6" strokeType="INSIDE" strokeWidth="0.0" width="477.0" />
+            <Text fill="WHITE" layoutX="189.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <JFXTextField fx:id="txtId" layoutX="14.0" layoutY="67.0" prefHeight="26.0" prefWidth="83.0" promptText="ID" />
-            <JFXTextField fx:id="txtName" layoutX="132.0" layoutY="70.0" prefHeight="26.0" prefWidth="154.0" promptText="Name" />
-            <JFXTextField fx:id="txtContactNo" layoutX="311.0" layoutY="70.0" prefHeight="26.0" prefWidth="115.0" promptText="Contact No." />
+            <JFXTextField fx:id="txtName" layoutX="151.0" layoutY="67.0" prefHeight="26.0" prefWidth="154.0" promptText="Name" />
+            <JFXTextField fx:id="txtContactNo" layoutX="343.0" layoutY="67.0" prefHeight="26.0" prefWidth="115.0" promptText="Contact No." />
             <JFXComboBox fx:id="cmbGender" layoutX="14.0" layoutY="125.0" prefHeight="26.0" prefWidth="100.0" promptText="Gender" />
-            <JFXTextArea fx:id="txtAddress" layoutX="132.0" layoutY="109.0" prefHeight="38.0" prefWidth="154.0" promptText="Address" />
-            <DatePicker fx:id="dpDOB" layoutX="311.0" layoutY="128.0" prefHeight="26.0" prefWidth="115.0" promptText="Date of Birth" />
-            <JFXButton layoutX="169.0" layoutY="173.0" onAction="#btnAddNewOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #15D507; -fx-background-radius: 20;" text="+New" textAlignment="CENTER" textFill="WHITE">
+            <JFXTextArea fx:id="txtAddress" layoutX="151.0" layoutY="106.0" prefHeight="38.0" prefWidth="168.0" promptText="Address" />
+            <DatePicker fx:id="dpDOB" layoutX="343.0" layoutY="125.0" prefHeight="26.0" prefWidth="115.0" promptText="Date of Birth" />
+            <JFXButton layoutX="209.0" layoutY="173.0" onAction="#btnAddNewOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #15D507; -fx-background-radius: 20;" text="+New" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="369.0" layoutY="173.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E13434; -fx-background-radius: 20;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="409.0" layoutY="173.0" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E13434; -fx-background-radius: 20;" text="Delete" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="303.0" layoutY="173.0" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #3091F2; -fx-background-radius: 20;" text="Update" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="343.0" layoutY="173.0" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #3091F2; -fx-background-radius: 20;" text="Update" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="237.0" layoutY="173.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E7CA39; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="277.0" layoutY="173.0" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: E7CA39; -fx-background-radius: 20;" text="Search" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <TableView fx:id="tblCustomer" layoutX="7.0" layoutY="212.0" prefHeight="150.0" prefWidth="424.0" stylesheets="@../css/style.css">
+            <TableView fx:id="tblCustomer" layoutX="7.0" layoutY="212.0" prefHeight="150.0" prefWidth="462.0" stylesheets="@../css/style.css">
               <columns>
                 <TableColumn fx:id="columnId" prefWidth="44.800049781799316" text="ID" />
                 <TableColumn fx:id="columnName" prefWidth="92.79998397827148" text="Name" />
                   <TableColumn fx:id="columnContactNo" prefWidth="73.60003662109375" text="Contact No." />
                   <TableColumn fx:id="columnGender" prefWidth="52.00001525878906" text="Gender" />
-                  <TableColumn fx:id="columnAddress" prefWidth="102.4000244140625" text="Address" />
-                  <TableColumn fx:id="columnDOB" prefWidth="58.39996337890625" text="DOB" />
+                  <TableColumn fx:id="columnAddress" prefWidth="130.4000244140625" text="Address" />
+                  <TableColumn fx:id="columnDOB" prefWidth="65.5999755859375" text="DOB" />
               </columns>
             </TableView>
-            <JFXButton layoutX="373.0" layoutY="373.0" onAction="#btnReloadOnAction" prefHeight="24.0" prefWidth="57.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Reload" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="411.0" layoutY="373.0" onAction="#btnReloadOnAction" prefHeight="24.0" prefWidth="57.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Reload" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

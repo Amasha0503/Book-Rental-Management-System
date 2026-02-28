@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -20,4 +21,7 @@ public class DashboardController {
     @FXML
     private Label lblOverdues;
 
+    public void btnPrintReportOnAction(ActionEvent actionEvent) {
+
+    }
 }

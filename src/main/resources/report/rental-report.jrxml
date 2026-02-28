@@ -1,0 +1,147 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="rental-report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c911f69-e715-4e51-a44d-4d2f3db444bc">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<query language="SQL"><![CDATA[SELECT * FROM rental]]></query>
+	<field name="RentalID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="RentalID"/>
+		<property name="com.jaspersoft.studio.field.label" value="RentalID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<field name="BookID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="BookID"/>
+		<property name="com.jaspersoft.studio.field.label" value="BookID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<field name="CustomerID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CustomerID"/>
+		<property name="com.jaspersoft.studio.field.label" value="CustomerID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<field name="IssueDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="IssueDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="IssueDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<field name="DueDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="DueDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="DueDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<field name="ReturnDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="ReturnDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReturnDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<field name="Fines" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="Fines"/>
+		<property name="com.jaspersoft.studio.field.label" value="Fines"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="rental"/>
+	</field>
+	<group name="RentalID">
+		<expression><![CDATA[$F{RentalID}]]></expression>
+	</group>
+	<group name="BookID">
+		<expression><![CDATA[$F{BookID}]]></expression>
+	</group>
+	<group name="CustomerID">
+		<expression><![CDATA[$F{CustomerID}]]></expression>
+	</group>
+	<group name="IssueDate">
+		<expression><![CDATA[$F{IssueDate}]]></expression>
+	</group>
+	<group name="DueDate">
+		<expression><![CDATA[$F{DueDate}]]></expression>
+	</group>
+	<group name="ReturnDate">
+		<expression><![CDATA[$F{ReturnDate}]]></expression>
+	</group>
+	<group name="Fines">
+		<expression><![CDATA[$F{Fines}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="132" splitType="Stretch">
+		<element kind="staticText" uuid="910b1280-3841-40a6-aa93-cbedc6d0e4ea" x="70" y="30" width="420" height="81" fontSize="29.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Book Rental Management System]]></text>
+		</element>
+		<element kind="textField" uuid="5de17693-58b3-44f0-bd57-080a623224e5" x="380" y="-10" width="110" height="30" fontSize="12.0" pattern="MMMMM dd, yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="textField" uuid="72789ec4-e216-419e-8c0a-908027ae3971" x="505" y="-10" width="70" height="30" fontSize="12.0" pattern="HH:mm">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<pageHeader height="49" splitType="Stretch">
+		<element kind="staticText" uuid="f8954bdb-8894-4a2c-a7b6-c321097e9317" x="70" y="0" width="238" height="30" fontSize="21.0" bold="true" hTextAlign="Right">
+			<text><![CDATA[Rental Report ]]></text>
+		</element>
+		<element kind="textField" uuid="9cbe412e-2567-47c3-b33a-0e162e8c9b6e" x="308" y="0" width="100" height="30" fontSize="22.0" pattern=" yyyy" bold="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="32" splitType="Stretch">
+		<element kind="staticText" uuid="c9152459-9f46-4e7d-9ce0-017eac8274be" x="0" y="0" width="81" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[RentalID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="242699f2-ce01-499b-920d-5ec185f561b1"/>
+		</element>
+		<element kind="staticText" uuid="50704cf6-298f-4fb0-a34f-2c424c29b297" x="81" y="0" width="79" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[BookID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5fbda4c5-49ad-40ef-b84b-9dc8e97e137c"/>
+		</element>
+		<element kind="staticText" uuid="67dbb46f-d3fe-4c84-8e43-42cc06c4f663" x="160" y="0" width="79" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[CustomerID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="012babff-4e50-4ea2-9bae-296097ee1db6"/>
+		</element>
+		<element kind="staticText" uuid="897945c8-7354-4da9-9f4d-99030cd10ec0" x="239" y="0" width="79" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[IssueDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56086bd6-679c-4fa7-b51a-5d41a3edb7cf"/>
+		</element>
+		<element kind="staticText" uuid="7cf583c9-2f39-4ff2-b289-989a2742d786" x="318" y="0" width="79" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[DueDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f3199861-686c-48a4-846f-0fcc126d7904"/>
+		</element>
+		<element kind="staticText" uuid="d11230dc-04f3-4d10-8d74-201a31fb318b" x="397" y="0" width="79" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[ReturnDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05e210e1-e625-4b44-b3c4-c472260379b3"/>
+		</element>
+		<element kind="staticText" uuid="7837da4d-bcf0-4b75-9140-5f0ea5562b56" x="476" y="0" width="79" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[Fines]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df9ba753-9838-4ece-8808-9c2aa7263a89"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<element kind="textField" uuid="50fe342e-1e86-4da4-a84f-02586dac7f91" x="0" y="0" width="81" height="30">
+				<expression><![CDATA[$F{RentalID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="242699f2-ce01-499b-920d-5ec185f561b1"/>
+			</element>
+			<element kind="textField" uuid="06f76e3d-a589-4b32-bdbe-a4cdb089cc3e" x="81" y="0" width="79" height="30">
+				<expression><![CDATA[$F{BookID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5fbda4c5-49ad-40ef-b84b-9dc8e97e137c"/>
+			</element>
+			<element kind="textField" uuid="a0e7a7b8-2506-47c5-ba51-091b9e42bec8" x="160" y="0" width="79" height="30">
+				<expression><![CDATA[$F{CustomerID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="012babff-4e50-4ea2-9bae-296097ee1db6"/>
+			</element>
+			<element kind="textField" uuid="9994d574-7fe1-41b4-ac7e-ff6af90aa490" x="239" y="0" width="79" height="30" pattern="MMM d, yyyy">
+				<expression><![CDATA[$F{IssueDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56086bd6-679c-4fa7-b51a-5d41a3edb7cf"/>
+			</element>
+			<element kind="textField" uuid="3b143890-79f7-4a54-9d68-18b9ffb61d32" x="318" y="0" width="79" height="30" pattern="MMM d, yyyy">
+				<expression><![CDATA[$F{DueDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f3199861-686c-48a4-846f-0fcc126d7904"/>
+			</element>
+			<element kind="textField" uuid="71a87b2d-d656-4df6-89e1-a52a2168ffc6" x="397" y="0" width="79" height="30" pattern="MMM d, yyyy">
+				<expression><![CDATA[$F{ReturnDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05e210e1-e625-4b44-b3c4-c472260379b3"/>
+			</element>
+			<element kind="textField" uuid="a339434c-ea47-47d5-b11e-b5484c337ea0" x="476" y="0" width="79" height="30">
+				<expression><![CDATA[$F{Fines}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="df9ba753-9838-4ece-8808-9c2aa7263a89"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

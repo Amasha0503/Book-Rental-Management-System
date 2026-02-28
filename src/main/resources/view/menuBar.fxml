@@ -10,42 +10,42 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuBarController">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2d1b3" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="166.0" />
-            <JFXButton layoutX="22.0" layoutY="175.0" onAction="#btnRentalOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Rental" textAlignment="CENTER" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2d1b3" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="127.0" />
+            <JFXButton layoutX="14.0" layoutY="154.0" onAction="#btnRentalOnAction" prefHeight="34.0" prefWidth="98.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Rental" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="22.0" layoutY="119.0" onAction="#btnDashboardOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="14.0" layoutY="108.0" onAction="#btnDashboardOnAction" prefHeight="34.0" prefWidth="98.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="22.0" layoutY="227.0" onAction="#btnCustomerOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Customer" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="14.0" layoutY="200.0" onAction="#btnCustomerOnAction" prefHeight="34.0" prefWidth="98.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Customer" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="22.0" layoutY="278.0" onAction="#btnBookOnAction" prefHeight="34.0" prefWidth="122.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Book" textAlignment="CENTER" textFill="WHITE">
+            <JFXButton layoutX="14.0" layoutY="248.0" onAction="#btnBookOnAction" prefHeight="34.0" prefWidth="98.0" ripplerFill="BLACK" style="-fx-background-color: E37C0F; -fx-background-radius: 30;" text="Book" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="45.0" layoutY="357.0" onAction="#btnSignOutOnAction" style="-fx-background-color: #794814;" text="Sign Out" textFill="WHITE">
+            <JFXButton layoutX="25.0" layoutY="347.0" onAction="#btnSignOutOnAction" style="-fx-background-color: #794814;" text="Sign Out" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXButton>
-            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="61.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="44.0" layoutX="42.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/3145866.png" />
                </image>
             </ImageView>
-            <Text fill="#794814" layoutX="57.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRMS" textAlignment="CENTER">
+            <Text fill="#794814" layoutX="38.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRMS" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <AnchorPane fx:id="dashRoot" layoutX="166.0" prefHeight="400.0" prefWidth="438.0" />
+            <AnchorPane fx:id="dashRoot" layoutX="127.0" prefHeight="400.0" prefWidth="477.0" />
          </children>
       </AnchorPane>

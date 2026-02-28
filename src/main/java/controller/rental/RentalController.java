@@ -1,4 +1,4 @@
-package controller;
+package controller.rental;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -8,6 +8,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 public class RentalController {
+
+    @FXML
+    private JFXTextField txtFines;
 
     @FXML
     private TableColumn columnBookID;
