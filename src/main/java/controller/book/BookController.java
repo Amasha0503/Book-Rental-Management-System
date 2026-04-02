@@ -13,6 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Book;
 import model.tm.BookTM;
+import model.tm.CustomerTM;
 import service.custom.BookService;
 
 
@@ -127,6 +128,17 @@ public class BookController implements Initializable {
     void btnSearchOnAction(ActionEvent event) {
         try {
             setTextToValues(serviceType.searchBookById(Integer.parseInt(txtId.getText())));
+
+            ArrayList<BookTM> bookList = new ArrayList<>();
+            bookList.add(new BookTM(
+                    Integer.parseInt(txtId.getText()),
+                    txtTitle.getText(),
+                    txtAuthor.getText(),
+                    cmbCategory.getValue().toString(),
+                    Integer.parseInt(txtQty.getText())
+            ));
+            tblBook.setItems(FXCollections.observableArrayList(bookList));
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -2,6 +2,7 @@ package repository;
 
 import repository.custom.impl.BookRepositoryImpl;
 import repository.custom.impl.CustomerRepositoryImpl;
+import repository.custom.impl.LoginRepositoryImpl;
 import repository.custom.impl.RentalRepositoryImpl;
 import util.RepositoryType;
 
@@ -18,6 +19,7 @@ public class RepositoryFactory {
             case CUSTOMER:return (T) new CustomerRepositoryImpl();
             case BOOK:return (T) new BookRepositoryImpl();
             case RENTAL:return (T) new RentalRepositoryImpl();
+            case LOGIN:return (T) new LoginRepositoryImpl();
         }
         return null;
 

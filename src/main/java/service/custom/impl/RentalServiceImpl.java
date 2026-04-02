@@ -61,5 +61,30 @@ public class RentalServiceImpl implements RentalService {
         return totalFines;
     }
 
+    @Override
+    public int getActiveRentalsCount() throws SQLException {
+        List<Rental> allRentals = rentalRepository.getAll();
+        int activeCount = 0;
+        for (Rental rental : allRentals) {
+            if (rental.getReturnDate() == null) {
+                activeCount++;
+            }
+        }
+        return activeCount;
+    }
+
+    @Override
+    public int getOverdueRentalsCount() throws SQLException{
+        List<Rental> allRentals = rentalRepository.getAll();
+        int overdueCount = 0;
+        LocalDate today = LocalDate.now();
+        for (Rental rental : allRentals) {
+            if (rental.getReturnDate() == null && rental.getDueDate().isBefore(today)) {
+                overdueCount++;
+            }
+        }
+        return overdueCount;
+    }
+
 
 }

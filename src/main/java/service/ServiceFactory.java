@@ -2,6 +2,7 @@ package service;
 
 import service.custom.impl.BookServiceImpl;
 import service.custom.impl.CustomerServiceImpl;
+import service.custom.impl.LoginServiceImpl;
 import service.custom.impl.RentalServiceImpl;
 import util.ServiceType;
 
@@ -19,6 +20,7 @@ public class ServiceFactory {
             case CUSTOMER:return (T) new CustomerServiceImpl();
             case BOOK:return (T) new BookServiceImpl();
             case RENTAL:return (T) new RentalServiceImpl();
+            case LOGIN:return (T) new LoginServiceImpl();
         }
         return null;
     }

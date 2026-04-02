@@ -13,6 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Book;
 import model.Rental;
+import model.tm.CustomerTM;
 import model.tm.RentalTM;
 import service.custom.RentalService;
 
@@ -165,6 +166,18 @@ public class RentalController implements Initializable {
     void btnSearchOnAction(ActionEvent event) {
         try {
             setTextToValues(serviceType.searchRentalById(Integer.parseInt(txtRentalID.getText())));
+
+            ArrayList<RentalTM> rentalList = new ArrayList<>();
+            rentalList.add(new RentalTM(
+                    Integer.parseInt(txtRentalID.getText()),
+                    Integer.parseInt(txtBookID.getText()),
+                    Integer.parseInt(txtCustomerID.getText()),
+                    dpIssueDate.getValue(),
+                    dpDueDate.getValue(),
+                    dpReturnDate.getValue(),
+                    Double.parseDouble(txtFines.getText())
+            ));
+            tblRental.setItems(FXCollections.observableArrayList(rentalList));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -117,6 +117,8 @@ public class DashboardController implements Initializable {
         loadTotalBookQuantity();
         loadTotalCustomers();
         loadTotalFines();
+        loadActiveRentals();
+        loadOverdueRentals();
     }
 
     private void loadTotalBookQuantity() {
@@ -146,6 +148,24 @@ public class DashboardController implements Initializable {
             lblFines.setText("Rs. 0.00");
         }
     }
+
+    private void loadActiveRentals() {
+        try {
+            int activeRentals = rentalService.getActiveRentalsCount();
+            lblActiveRentals.setText(String.valueOf(activeRentals));
+        } catch (SQLException e) {
+            lblActiveRentals.setText("0");
+        }
+    }
+
+     private void loadOverdueRentals() {
+        try {
+            int overdueRentals = rentalService.getOverdueRentalsCount();
+            lblOverdues.setText(String.valueOf(overdueRentals));
+        } catch (SQLException e) {
+            lblOverdues.setText("0");
+        }
+     }
 
 
 }

@@ -1,8 +1,10 @@
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import config.AppModule;
+import controller.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -21,11 +23,21 @@ public class Starter extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/menuBar.fxml"));
+       /*FXMLLoader loader = new FXMLLoader(getClass().getResource("view/menuBar.fxml"));
 
         loader.setControllerFactory(injector::getInstance);
 
         stage.setScene(new Scene(loader.load()));
+        stage.show();
+*/
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/login.fxml"));
+        loader.setControllerFactory(injector::getInstance);
+
+        Parent root = loader.load();
+
+        LoginController controller = loader.getController();
+        controller.setInjector(injector);
+        stage.setScene(new Scene(root));
         stage.show();
     }
 }
